@@ -1,0 +1,241 @@
+/*
+File: style.css
+GUI Assignment 1: Creating My First Web Page
+Tim Truong, UMass Lowell Computer Science, tim_truong1@student.uml.edu
+Copyright (c) 2022 by Tim Truong. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+Updated on 5/25/22 at 8:30pm.
+Instructor: Professor Wenjin Zhou
+Sources of Help: W3Schools and Javatpoint
+Brief Overview: The site I created for hw 1 for GUI 1 is pretty much
+a mini website portfolio using only html and css. Provides some information about me
+including but not limited to my hobbies, interests, and favorite food. Also includes
+links about some of my favorite food and how to make it and some images.
+*/
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: mintcream;
+    font-family: Garamond, serif;
+}
+
+/*  Credit to this Javatpoint site on helping me get started on making a nav bar
+    https://www.javatpoint.com/how-to-make-a-navigation-bar-in-html and
+    credit to this W3Schools site for making me understand the justify content
+    properties -> https://www.w3schools.com/csSref/css3_pr_justify-content.asp
+*/
+
+.header {    /* Fixed navbar */
+    background-color: rgb(247, 0, 255);
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0px;
+}
+
+.header .menu, .AboutList {
+    list-style: none;
+}
+
+.header .menu li {
+    display: inline-flex;
+}
+
+.header .menu li a {
+    color: black;
+}
+
+.header .menu li a:hover, .VietFood div p a:hover, td a:hover {
+    color:#5a05e2;
+}
+
+.name {
+    font-size: 18px;
+}
+
+.name, .header .menu li a {
+    text-decoration: none;
+    padding: 20px;        /* Gives more spacing between each item by approximately that much*/
+}
+
+.main {
+    margin: 20px;
+    margin-top: 100px;
+}
+
+.imgArea p {
+    padding: 20px;
+}
+
+.intro {
+    font-size: large;
+    width: 50%;
+}
+
+/*  Credit to this W3Schools site on helping me
+    get started on making smile image and text be side by side
+    with each other -> https://www.w3schools.com/howto/howto_css_images_side_by_side.asp
+*/
+
+#smile-face {
+    height: 200px;
+    width: 25%;
+    float: left;
+    margin-right: 20px;
+}
+
+.AboutContainer {
+    padding-top: 200px;    /* Gives space between intro and more fact info section */
+}
+
+#about {
+    border-bottom: 2px solid black;
+    border-radius: 20%;
+}
+
+.AboutList {
+    text-align: center;
+}
+
+.anime {
+    padding: 5px;        /* Gives Spacing between the first item in list and header */
+    margin: 5px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h2, p {
+    margin: auto;
+    text-align: center;
+}
+
+.Poke-Sec {
+    padding: 20px;
+}
+
+.Poke-Sec p:nth-child(3) {
+    padding-bottom: 20px;
+}
+
+.Poke-Table {
+    width: 60%;
+    background-color: mintcream;
+    border: 1px solid black;
+    border-collapse: collapse;    /* Breaks column border line */
+    margin: auto;            /* Makes table centered */
+}
+
+tr {
+    border: 1px solid black;
+}
+
+tr:nth-child(1) {
+    background: linear-gradient(#3505f7, #8c7df0);
+}
+
+tr:nth-child(2) {
+    background: linear-gradient(#f73505, #e78516);
+}
+
+tr:nth-child(3) {
+    background: linear-gradient(#045311, #0cd35f);
+}
+
+tr:nth-child(4) {
+    background: linear-gradient(#0d33db, #0cabd3);
+}
+
+tr:nth-child(5) {
+    background: linear-gradient(#c5e6ca54, #a4bdae);
+}
+
+tr:nth-child(6) {
+    background: linear-gradient(#5a05e2, #f1a9e2);
+}
+
+tr:nth-child(7) {
+    background: linear-gradient(#8905b1, #f043d3);
+}
+
+td a, p a {
+    text-decoration: none;
+}
+
+.VietFood div p a {
+    border-bottom: 1px solid black;
+}
+
+.VietFood, .VietFood div:nth-child(2), .VietFood p:nth-child(1) {
+    padding: 20px;    /* Added paddings to help provide space between each food */
+}
+
+.PhoScore, .BunBoHueScore {
+    display: grid;
+}
+
+/*  Credit to this W3Schools site for centering an image 
+    https://www.w3schools.com/howto/howto_css_image_center.asp.
+    It was pretty helpful and I modified the width properties and added
+    the height property to match what I needed.
+*/
+
+#PhoImage, #BunBoHueImage {
+    display: block;
+    height: 200px;
+    width: 20%;
+    margin: auto;
+}
+
+.PhoTable, .BunBoHueTable {    /* Provides space between table and image while also eliminating row gap */
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.PhoTable td, .BunBoHueTable td {
+    background-color: #4bd7fa;
+}
+
+.Contact-Sec {
+    text-align: center;
+}
+
+.Contact-Sec a {
+    text-decoration: none;        /* Removes pesky line from one of the icons */
+}
+
+#linkedin, #github {
+    font-size: 32px;
+}
+
+#linkedin {
+    color: rgb(101, 43, 209);
+    text-shadow: 0 0 5px #4b6de9;
+}
+
+#github {
+    color: rgb(163, 25, 163);
+    text-shadow: 0 0 5px #c36ef8;
+}
+
+#copyright {
+    padding: 20px;
+}
+
+.valid {
+    display: inline-flex;
+}

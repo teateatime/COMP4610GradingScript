@@ -1,0 +1,199 @@
+/*
+File: pacific.css
+GUI Assignment 2: Style a Site with External CSS
+Tim Truong, UMass Lowell Computer Science, tim_truong1@student.uml.edu
+Copyright (c) 2022 by Tim Truong. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+Updated on 5/28/22 at 8:00pm.
+Instructor: Professor Wenjin Zhou
+Sources of Help: Youtube and W3Schools
+Brief Overview: The site I created or modified rather in hw2 was essentially making the
+pacific resort website be responsive so that it can match the following screenshots within the
+folder HW2_read folder during certain widths and lengths.
+*/
+
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+    display: block;
+}
+
+body {
+    background-image: url("ptrbackground.jpg");
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #00569f;
+}
+
+/*  Credit to this youtube video that helped about how css grids worked and its usage
+    that the professor gave us to read.
+    Link: https://www.youtube.com/watch?v=jV8B24rSN5o
+    Without this video and css grids, I personally think that this assignment would become alot
+    challenging.
+*/
+
+#wrapper {    /* Centers the "main" page of the website while displaying it as a grid */
+    display: grid;    /* so that the navigation column, and copyright row can have a fixed with and be apart */
+    width: 80%;    /* of the content div section respectively */
+    margin: auto;
+    min-width: 600px;
+    grid-template-columns: 190px 2fr;
+}
+
+header {
+    grid-column: 1/3;    /* Set the header's grid-column so that it reaches the right end of the content div */
+}
+
+img {
+    float: left;
+}
+
+#wrapper nav {    /* Provides extra padding at the bottom so the copyright footer would be at the position where */
+    background-color: #75bfe4a3;    /* it should be */
+    padding-bottom: 280px;
+}
+
+nav ul {
+    font-size: 1.2em;
+    font-weight: bold;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #000033;
+}
+
+nav a:visited {
+    color: #344873;
+}
+
+nav a:hover {
+    color: #FFFFFF;
+}
+
+#content {    /* Set the content div at column 2 and row 2 so that it would be where the footer copyright is at */
+    background-color: mintcream;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#content ul {
+    list-style-position: inside;
+    padding: 1px 20px 20px 20px;
+    list-style-image: url(marker.gif);
+}
+
+#content ul li:nth-child(1), #content ul li:nth-child(2),    /* Initial margin for my laptop screensize */
+#content ul li:nth-child(3), #content ul li:nth-child(4),    /* so the text would not be out of place */
+#content ul li:nth-child(5) {
+    margin-left: 350px;
+}
+
+#content img, #content h2, #contact {
+    padding-left: 30px;
+}
+
+#content img {
+    padding-right: 20px;
+}
+
+p {    /* Initial margin for my laptop screensize so the text would not be out of place */
+    text-align: left;
+    margin-right: 20px;
+    margin-left: 370px;
+}
+
+.resort {    /* properties of the "pacific trails resort" text */
+    font-weight: bold;
+    color: #667daf;
+}
+
+h1 {    /* Used background-position x and y so that the image is at the right end of the div while centered */
+    color: white;
+    background-image: url("sunset.jpg");
+    background-repeat: no-repeat;
+    background-color: #000033;    /* Used the background-color to fill in the gap where the image does not reach */
+    background-position-x: right;
+    background-position-y: center;
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+h2 {
+    color: #3399CC;
+}
+
+h1,
+h2 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+#contact {
+    font-size: 90%;
+    margin-left: 330px;
+    margin-bottom: 90px;
+    margin-top: -20px;
+}
+
+footer {    /* Aligned the copyright footer at the bottom left using align-self: end */
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 75%;
+    font-style: italic;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    grid-column: 2;    /* Set the grid-column and row to be at 2 so that the footer placement would be */
+    grid-row: 2;    /* where the content div would be at */
+    align-self: end;
+}
+
+/*  Utilized media queries to help solve and complete this hw assignment.
+    Credit to this W3Schools website for helping me get started about how they work.
+    Link: https://www.w3schools.com/css/css3_mediaqueries.asp
+*/
+
+@media screen and (max-width: 1396px) {
+    #contact {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 1081px) {
+    #content ul li:nth-child(5) {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 1029px) {    /* Shifts the list content and other text boxes and stuff inorder to */
+    #content ul li:nth-child(4) {        /* match what the assignment is asking for which is to make the webiste to */
+        margin-left: 50px;                /* be approximately the same as the 5 images given to us in the HW2_read */
+    }                                        /* folder. */
+}
+@media screen and (max-width: 971px) {
+    #content ul li:nth-child(3) {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 936px) {
+    #content ul li:nth-child(2) {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 913px) {
+    #content ul li:nth-child(1) {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 864px) {
+    p {
+        margin-left: 30px;
+    }
+}
+
+@media screen and (min-width: 793px) and (max-width: 863px) {
+    img {
+        padding-right: 10px;
+    }
+}

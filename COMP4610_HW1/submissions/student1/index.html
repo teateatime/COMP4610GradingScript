@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<!--
+File: index.html
+GUI Assignment 1: Creating My First Web Page
+Tim Truong, UMass Lowell Computer Science, tim_truong1@student.uml.edu
+Copyright (c) 2022 by Tim Truong. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+Updated on 5/25/22 at 8:30pm.
+Instructor: Professor Wenjin Zhou
+Sources of Help: W3Schools and Javatpoint
+Brief Overview: The site I created for hw 1 for GUI 1 is pretty much
+a mini website portfolio using only html and css. Provides some information about me
+including but not limited to my hobbies, interests, and favorite food. Also includes
+links about some of my favorite food and how to make it and images.
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Tim T's Website Page</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <!--Credit to this W3Schools page site -> https://www.w3schools.com/icons/ for
+        being able to make users to use icons
+        -->
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet">
+    </head>
+    <body>
+
+    <!-- page content -->
+    <!--Navigational bar-->
+    <!--Credit to this Javatpoint site on helping me make a nav bar
+    https://www.javatpoint.com/how-to-make-a-navigation-bar-in-html 
+    The overall structure/model of it is pretty much the same as it is in the site
+    -->
+
+    <nav class="header">
+        <div class="name">Tim Truong</div>
+        <ul class="menu">
+            <li><a class="hlinks" href="#home">Home</a></li>
+            <li><a class="hlinks" href="#about">About</a></li>
+            <li><a class="hlinks" href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!--Main section of the website-->
+    <!--Below here is a brief intro of who I am-->
+    <div class="main" id="home">
+        <div class="imgArea">
+            <p class="intro"><img src="images/smile.png" alt="Me in jacket" id="smile-face">
+                Hello I'm Tim, currently a junior and
+                I am majoring in Computer Science at Umass Lowell.
+                Some facts about me are that I like to play videogames, read alot of
+                manga, and doing artwork once in a while. I also do morning jogs and
+                play ping pong as well.
+            </p>
+        </div>
+
+        <!--More facts about me are below-->
+
+        <div class="AboutContainer">
+        <h2 id="about">More Things About Me</h2>
+            <ul class="AboutList">
+                <li class="anime"></li>    <!--Unordered List of some of my favorite anime-->
+                    <li>1) I like to watch anime.</li>
+                    <li>Some of my favorite animes are:</li>
+                    <li>One Piece</li>
+                    <li>Vinland Saga</li>
+                    <li>Death Note</li>
+                    <li>Violet Evergarden</li>
+
+                <li class="Poke-Sec">2) I like to play alot of Pokemon.<br>
+                    <p>I typically do alot of challenges like nuzlockes
+                        to make the game interesting.</p>
+                    <p>Additionally, here are some of my favorite
+                        Pokemon of each typing.</p>
+
+                <table class="Poke-Table">    <!--List of some of my favorite Pokemon of each typing-->
+                    <tr>
+                    <th>Pokemon Type</th><th>Pokemon</th>
+                    </tr>
+                    <tr>
+                    <!--I do not own or made any these links/websites-->
+                    <td class="Poke-Types">Fire</td><td>
+                        <!--Credit: Link to Arcanine's Info from Bulbapedia-->
+                        <a href="https://bulbapedia.bulbagarden.net/wiki/Arcanine_(Pok%C3%A9mon)">Arcanine</a></td>
+                    </tr>
+                    <tr>
+                    <td class="Poke-Types">Grass</td><td>
+                        <!--Credit: Link to Torterra's Info from Bulbapedia-->
+                        <a href="https://bulbapedia.bulbagarden.net/wiki/Torterra_(Pok%C3%A9mon)">Torterra</a></td>
+                    </tr>
+                    <tr>
+                    <td class="Poke-Types">Water</td><td>
+                        <!--Credit: Link to Quagsire's Info from Bulbapedia-->
+                        <a href="https://bulbapedia.bulbagarden.net/wiki/Quagsire_(Pok%C3%A9mon)">Quagsire</a></td>
+                    </tr>
+                    <tr>
+                    <td class="Poke-Types">Steel</td><td>
+                        <!--Credit: Link to Skarmory's Info from Bulbapedia-->
+                        <a href="https://bulbapedia.bulbagarden.net/wiki/Skarmory_(Pok%C3%A9mon)">Skarmory</a></td>
+                    </tr>
+                    <tr>
+                    <td class="Poke-Types">Dragon</td><td>
+                        <!--Credit: Link to Salamence's Info from Bulbapedia-->
+                        <a href="https://bulbapedia.bulbagarden.net/wiki/Salamence_(Pok%C3%A9mon)">Salamence</a></td>
+                    </tr>
+                    <tr>
+                    <td class="Poke-Types">Poison</td><td>
+                        <!--Credit: Link to Drapion's Info from Bulbapedia-->
+                        <a href="https://bulbapedia.bulbagarden.net/wiki/Drapion_(Pok%C3%A9mon)">Drapion</a></td>
+                    </tr>
+                </table>
+                </li>
+                <li>3) I'm Vietnamese.</li>
+                <li>And here are some of the most famous/popular dishes within the Vietnamese Cultures that I like.</li>
+            </ul>
+
+        <div class="VietFood">    <!--Info about some of my favorite food from my culture-->
+            <div>
+            <!--Credit to owner of this site -> https://www.recipetineats.com/vietnamese-pho-recipe/-->
+            <!--Found this site to help explain pho better than what I can explain on my own-->
+
+            <p><a href="https://www.recipetineats.com/vietnamese-pho-recipe/">Pho</a>
+            <br>A bone broth typically made up of multiple herbs,<br>
+             including but not limited to bean sprouts, basil, and green onions.<br>It can also
+            contain meatballs, thin slices of beef that are medium rare, rice noodles, and is overall a popular dish
+            worldwide.<br>I generally like eating pho mainly due to how easy it is to make it.</p>
+            <div class="PhoScore">
+                <img src="https://www.recipetineats.com/wp-content/uploads/2019/04/Beef-Pho_6.jpg?resize=650,910"
+                alt="Pho Img" id="PhoImage">
+                <table class="PhoTable">
+                    <tr>
+                        <td>Rating</td>
+                    </tr>
+                    <tr>
+                        <td>9.2/10</td>
+                    </tr>
+                </table>
+            </div>
+            </div>
+
+            <div>
+            <!--Credit to owner of this site -> https://cookingwithlane.com/vietnamese-bun-bo-hue/-->
+            <!--Found this site to help explain bun bo hue better than what I can explain on my own-->
+
+            <div class="BunBoHueScore">
+            <p><a href="https://cookingwithlane.com/vietnamese-bun-bo-hue/">Bun Bo Hue</a>
+            <br>A spicy broth rice noodle dish that contains beef and multiple spices.<br>It also includes 
+            several herbs and vegetables like green onions, bean sprouts, and shallots.<br>
+            I typically like it due to how it offers packs more of a kick in spicyness compared to pho.</p>
+            <img src="https://cookingwithlane.com/wp-content/uploads/2020/01/bun-bo-hue-vietnamese-spicy-noodle-soup-019.jpg"
+            alt="Bun Bo Hue Img" id="BunBoHueImage">
+            </div>
+                <table class="BunBoHueTable">
+                    <tr>
+                        <td>Rating</td>
+                    </tr>
+                    <tr>
+                        <td>9.3/10</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!--Contact Section-->
+
+    <h2 id="Contacts">Contacts</h2>
+    <div class="Contact-Sec" id="contact">
+        <a href="https://www.linkedin.com/in/tim-truong-0a7314217/">
+        <i class="fa fa-linkedin-square" id="linkedin"></i>
+        </a>
+        <a href="https://github.com/teateatime">
+        <i class="fa fa-github-square" id="github"></i>
+        </a>
+    </div>
+        <p id="copyright">Copyright © 2022 Tim Truong</p>
+        <p>&copy; &amp; Tim Truong</p>
+    </div>
+
+    <!--CSS Validator Section-->
+    <!--Credit to W3C validation website-->
+    <div class="valid">
+        <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+               src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                alt="Valid CSS!">
+            </a>
+        </p>
+        
+        <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!">
+            </a>
+        </p>
+        </div>
+
+    </body>
+</html>
+

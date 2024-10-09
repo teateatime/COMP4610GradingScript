@@ -1,0 +1,127 @@
+/*
+File: SiteStyles.css
+
+Assignment: Creating our first web page
+
+Written by: Max Tighe, 
+    Computer Science Student at UMass Lowell
+    contact: max_tighe@student.uml.edu
+
+Date created: 5/22/2023
+
+Description: A .css file containing all of the styles
+            used for my website stored in MySite.html.
+            Contains styles for the body, background,
+            div elements, pictures, as well as for
+            lists and tables.
+
+            
+css file creation and linking learned from here:
+https://www.w3schools.com/css/css_howto.asp
+
+*/
+
+body{
+    height: 100%;
+    margin: 0px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* background is displayed behind everything in a div element */
+.background_castle {
+    background-image: url("../Images/Chepstow_Castle.jpg");
+
+    height: 3500px;
+    width: 100%;
+
+    /* learned text placement information from this article:
+    https://www.w3schools.com/howto/howto_css_image_text.asp */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+
+    background-origin: content-box;
+}
+
+img {
+    width: 200px;
+    height: auto;
+}
+
+/* used to display the content in
+front of the background image,
+has a colored background for 
+readability */
+#foregroundDiv {
+    background: rgba(80, 80, 80, 0.8);
+    border-radius: 12px;
+    text-align: center;
+
+    left: 10%;
+    right: 10%;
+
+    position:static;
+
+    padding: 3%;
+    margin: 2%;
+}
+
+h1 {font-weight: bolder;
+    color: black;
+
+    width: 100%;
+}
+
+p { font-weight: normal;
+    color: rgb(224, 224, 224);
+
+    /* margin spacing info was found here:
+    https://stackoverflow.com/questions/9547291 */
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+/* gives the tables and their items a different background
+for better readability */
+table, th, td {
+    align-items: center;
+    width: 50%;
+
+    padding: 5px;
+    margin:auto;
+    
+    color:white;
+    background-color: rgba(129, 129, 129, 0.3);
+    border: 2px solid black;
+}
+
+
+ul {
+    margin:auto;
+    width: 50%;
+    background-color: rgba(116, 116, 116, 0.4);
+}
+
+/* to make the list color match the rest 
+of the non-header text on the website */
+li {
+    padding: 8px;
+    text-align: left;
+    color: white;         
+    border-radius: 8px;
+}
+
+/* for the horizonal lines on the page */
+hr {
+    border-color: rgb(49, 49, 49);
+    border-width: 2px;
+    border-style: solid;
+}
+
+/* to make the link text white like
+the rest of the non-hearer text on the page */
+a {
+    color: white;
+}
